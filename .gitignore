@@ -1,0 +1,19 @@
+.venv/
+venv/
+
+# Arquivos de cache e compilação
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Configurações de IDEs (caso use)
+.vscode/
+.idea/
+
+# Dependências armazenadas em um arquivo
+Pipfile
+Pipfile.lock
+
+# Logs e arquivos temporários
+*.log
