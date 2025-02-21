@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Gerador de Newsletter{% endblock %}
+{% block content %}
+<h2>Gerador de Newsletter</h2>
+<form method="post">
+    <div>
+        <label for="theme">Assunto:</label>
+        <input type="text" id="theme" name="theme" required>
+    </div>
+    <div>
+        <label for="link">Link:</label>
+        <input type="url" id="link" name="link" required>
+    </div>
+    <button type="submit">Gerar Newsletter</button>
+</form>
+{% if generated_newsletter %}
+<div class="newsletter-preview">
+    <h3>Newsletter Gerada:</h3>
+    <p>{{ generated_newsletter }}</p>
+</div>
+{% endif %}
+{% endblock %}

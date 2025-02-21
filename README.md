@@ -1,0 +1,1 @@
+Projeto gerador de Newsletter com Gemini

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h2>Campanhas Ativas</h2>
+<table>
+    <tr>
+        <th>Nome da Campanha</th>
+        <th>Status</th>
+        <th>Ações</th>
+    </tr>
+    {% for campaign in campaigns %}
+    <tr>
+        <td>{{ campaign.name }}</td>
+        <td>{{ campaign.status }}</td>
+        <td>
+            <button>Editar</button>
+            <button>Excluir</button>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<button>Nova Campanha</button>
+{% endblock %}
