@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request
+from flowIA import langflow_call
+
 app = Flask(__name__)
 @app.route('/')
 def dashboard():
@@ -15,7 +17,8 @@ def newsletter():
     if request.method == 'POST':
         theme = request.form['theme']
         link = request.form['link']
-        # Inicialmente, não gera a newsletter; isso será implementado depois
+        generated_newsletter = langflow_call(theme, link)
+        
     return render_template('newsletter.html', generated_newsletter=generated_newsletter)
 if __name__ == '__main__':
     app.run(debug=True)
